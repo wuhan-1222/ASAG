@@ -1,0 +1,17 @@
+This shareware is the deep learning model proposed by manuscript Automatic Short Answer Grading via BERT-based Deep Neural Networks (ID TLT-2021-07-0194 in IEEE Transactions on Learning Technologies)
+
+一、Software running platform: TensorFlow-gpu 2.2.0
+二、Software Description:
+     (1)bert4keras folder: the BERT model used, from https://github.com/bojone/bert4keras
+     (2)dataset folder：contains the double-expanded Mohler dataset in the paper
+     (3)capsule.py：contains the capsule network model used
+     (4)ReadFile.py: preprocessing for SemEval-2013 dataset
+     (5)TexasData.py: preprocessing for the Mohler dataset in NorthTexas
+     (6)kfoldNorthTexas.py：Model for the Mohler dataset, using 12-fold cross-validation
+     (7)NorthTexas.py：is used to evaluate multiple evaluation indicators for the Mohler dataset, including RMSE, MAE, Kappa, Pearson correlation coefficient, accuracy
+     (8)SemEval.py：Model for the SemEval-2013 dataset, including measuring F1 value, accuracy, Kappa value
+三、Software running: kfoldNorthTexas.py runs the model for the Mohler dataset,	SemEval.py runs the model for the SemEval-2013 dataset
+四、Other instructions:
+     (1)The BERT initial parameters used by the model come from https://storage.googleapis.com/bert_models/2020_02_20/uncased_L-12_H-768_A-12.zip
+     (2)The used SemEval-2013 dataset comes from http://bit.ly/11a7QpP
+     (3)The used Mohler dataset comes from http://web.eecs.umich.edu/~mihalcea/downloads/ShortAnswerGrading_v2.0.zip
